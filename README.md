@@ -238,14 +238,6 @@ netlify deploy --prod --dir=dist
 3. Drag and drop the `dist` folder
 4. Your site will be live!
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
 ## Performance Metrics
 
 The carousel is optimized for:
@@ -260,9 +252,8 @@ The carousel is optimized for:
 When contributing, please ensure:
 
 1. Accessibility standards are maintained
-2. All tests pass
-3. Code follows the existing style
-4. Documentation is updated
+2. Code follows the existing style
+3. Documentation is updated
 
 ## Resources
 

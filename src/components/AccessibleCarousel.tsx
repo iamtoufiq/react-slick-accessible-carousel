@@ -68,7 +68,7 @@ const AccessibleCarousel = memo<AccessibleCarouselProps>(
         </div>
         {/* Accessible control buttons */}
         <div
-          className="flex justify-center items-center gap-3 sm:gap-4 mb-4 flex-wrap"
+          className="flex justify-center items-center gap-6 sm:gap-8 mb-6 flex-wrap"
           id={carouselControlsId}
           role="toolbar"
           aria-label="Carousel controls"

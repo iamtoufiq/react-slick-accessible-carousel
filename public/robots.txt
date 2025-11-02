@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://accessible-carousel.netlify.app/sitemap.xml

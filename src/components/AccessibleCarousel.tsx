@@ -8,7 +8,10 @@ import { CarouselSlide } from "./CarouselSlide";
 import { CarouselIndicators } from "./CarouselIndicators";
 import { CarouselAnnouncement } from "./CarouselAnnouncement";
 import { useAccessibleCarousel } from "../hooks/useAccessibleCarousel";
-import type { AccessibleCarouselProps } from "../types/carousel.types";
+import {
+  DIRECTION,
+  type AccessibleCarouselProps,
+} from "../types/carousel.types";
 
 const AccessibleCarousel = memo<AccessibleCarouselProps>(
   ({
@@ -74,7 +77,7 @@ const AccessibleCarousel = memo<AccessibleCarouselProps>(
         >
           <CarouselButton
             ref={prevButtonRef}
-            direction="prev"
+            direction={DIRECTION.PREV}
             onClick={goToPrevious}
             disabled={items.length <= 1}
             ariaLabel="Previous slide"
@@ -82,7 +85,7 @@ const AccessibleCarousel = memo<AccessibleCarouselProps>(
 
           <CarouselButton
             ref={nextButtonRef}
-            direction="next"
+            direction={DIRECTION.NEXT}
             onClick={goToNext}
             disabled={items.length <= 1}
             ariaLabel="Next slide"

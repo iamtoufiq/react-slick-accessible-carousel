@@ -115,3 +115,8 @@ export interface UseAccessibleCarouselReturn
 export type CarouselId = string;
 export type SlideIndex = number;
 export type AnnouncementText = string;
+
+export enum DIRECTION{
+  PREV = "prev",
+  NEXT = "next",
+}

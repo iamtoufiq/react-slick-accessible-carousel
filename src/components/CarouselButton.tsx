@@ -1,6 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import type { CarouselButtonProps } from "../types/carousel.types";
-
+import { DIRECTION, type CarouselButtonProps } from "../types/carousel.types";
 const CarouselButton = ({
   direction,
   onClick,
@@ -8,8 +7,7 @@ const CarouselButton = ({
   ariaLabel,
   ref,
 }: CarouselButtonProps) => {
-  const Icon = direction === "prev" ? ChevronLeft : ChevronRight;
-
+  const Icon = direction === DIRECTION.PREV ? ChevronLeft : ChevronRight;
   return (
     <button
       ref={ref}
@@ -24,7 +22,7 @@ const CarouselButton = ({
         className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
       />
       <span className="sr-only">
-        {direction === "prev" ? "Previous" : "Next"}
+        {direction === DIRECTION.PREV ? "Previous" : "Next"}
       </span>
     </button>
   );

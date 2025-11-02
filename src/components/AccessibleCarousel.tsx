@@ -52,7 +52,6 @@ const AccessibleCarousel = memo<AccessibleCarouselProps>(
           announcement={announcement}
           carouselLiveId={carouselLiveId}
         />
-
         {/* Main carousel */}
         <div className="relative w-full mb-6">
           <Slider ref={sliderRef} {...sliderSettings} className="w-full">
@@ -67,7 +66,6 @@ const AccessibleCarousel = memo<AccessibleCarouselProps>(
             ))}
           </Slider>
         </div>
-
         {/* Accessible control buttons */}
         <div
           className="flex justify-center items-center gap-3 sm:gap-4 mb-4 flex-wrap"

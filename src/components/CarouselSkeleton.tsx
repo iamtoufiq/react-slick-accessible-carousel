@@ -4,7 +4,7 @@ const CarouselSkeleton = memo(() => {
   return (
     <div className="relative w-full max-w-[800px] mx-auto px-4 sm:px-6 lg:px-0 py-8">
       <div className="relative w-full mb-6">
-        <div className="w-full h-[600px] md:h-[700px] bg-gray-200 rounded-lg animate-pulse overflow-hidden">
+        <div className="w-full h-[600px] md:h-[700px] bg-gray-200  animate-pulse overflow-hidden">
           <div className="w-full h-[400px] sm:h-[450px] md:h-[500px] bg-gray-300"></div>
           <div className="w-full flex-1 px-6 sm:px-8 md:px-12 py-6 sm:py-8 md:py-10">
             <div className="h-8 sm:h-10 md:h-12 bg-gray-300 rounded mb-3 sm:mb-4 w-3/4 mx-auto animate-pulse"></div>

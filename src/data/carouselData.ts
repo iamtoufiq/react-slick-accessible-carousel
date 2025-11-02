@@ -5,7 +5,7 @@ export const carouselItems: CarouselItem[] = [
     id: 'slide-1',
     title: 'Welcome to Accessible Carousel',
     description:
-      'This carousel demonstrates best practices for accessibility, including full keyboard navigation, ARIA attributes, and screen reader support.',
+      'This carousel demonstrates best practices for accessibility, including full keyboard navigation, ARIA attributes, &  screen reader support.',
     image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
     alt: 'Mountain landscape with lake and trees',
   },

@@ -36,7 +36,7 @@ const CarouselSlide = memo<CarouselSlideProps>(
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900 leading-tight">
               {item.title}
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto line-clamp-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto line-clamp-3 sm:line-clamp-4">
               {item.description}
             </p>
           </div>

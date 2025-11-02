@@ -10,7 +10,7 @@ function App() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-8 md:py-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  text-center drop-shadow-lg">
-            Accessible Carousel Demo
+            Accessible Carousel
           </h1>
         </div>
       </header>

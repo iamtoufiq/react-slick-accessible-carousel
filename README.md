@@ -29,13 +29,13 @@ A fully accessible, performance-optimized carousel component built with React, T
 - ✅ **Touch Support**: Swipe gestures on mobile devices
 - ✅ **Responsive Design**: Works seamlessly on all screen sizes
 - ✅ **Customizable**: Easy to configure and extend
-- ✅ **Autoplay**: Optional autoplay with pause/play controls
+- ✅ **Autoplay**: Configurable autoplay (enabled by default in demo, can be disabled)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 
 ### Installation
@@ -54,6 +54,10 @@ npm run dev
 ```
 
 4. Open your browser and navigate to the URL shown in the terminal (typically `http://localhost:5173`)
+
+**What you'll see**: The carousel will load with a skeleton placeholder, then display 5 demo slides showcasing accessibility features. The carousel will start autoplaying automatically every 5 seconds, cycling through landscape images with descriptions of accessibility features.
+
+**Important Note**: The demo is configured with autoplay enabled by default. This means slides will change automatically every 5 seconds. You can interact with the carousel at any time using keyboard navigation or mouse clicks, and autoplay will pause when you hover over the carousel or focus on its controls.
 
 ### Build for Production
 
@@ -99,11 +103,11 @@ npm run preview
 
 When testing, NVDA should announce:
 
-- "Image carousel, region" when entering the carousel
-- "Previous slide, button" when focusing previous button
-- "Next slide, button" when focusing next button
-- "Slide 1 of 5: Welcome to Accessible Carousel. [description]" when slide changes
-- "Carousel paused" or "Carousel playing" when toggling autoplay
+- Main image carousel, region" when entering the carousel
+- Previous slide, button" when focusing previous button
+- Next slide, button" when focusing next button
+- lide 1 of 5: Welcome to Accessible Carousel. This carousel demonstrates best practices for accessibility, including full keyboard navigation, ARIA attributes, & screen reader support." when the carousel loads
+- Automatic slide transitions every 5 seconds with announcements like Slide 2 of 5: Keyboard Navigation. Navigate using Arrow keys, Home, End, Page Up, and Page Down. All controls are fully keyboard accessible and include proper focus indicators."
 
 ### Keyboard Navigation Checklist
 
@@ -141,7 +145,9 @@ accessible-carousel/
 │   │   ├── CarouselAnnouncement.tsx    # Screen reader announcements
 │   │   ├── CarouselButton.tsx          # Navigation buttons
 │   │   ├── CarouselIndicators.tsx      # Slide indicators
-│   │   └── CarouselSlide.tsx           # Individual slide component
+│   │   ├── CarouselSkeleton.tsx        # Loading skeleton component
+│   │   ├── CarouselSlide.tsx           # Individual slide component
+│   │   └── CarouselWrapper.tsx         # Wrapper with Suspense loading
 │   ├── data/
 │   │   └── carouselData.ts             # Sample carousel data
 │   ├── hooks/
@@ -150,13 +156,19 @@ accessible-carousel/
 │   │   └── carousel.types.ts           # TypeScript type definitions
 │   ├── App.tsx                         # Main app component
 │   ├── main.tsx                        # Entry point
-│   └── index.css                       # Global styles
-├── public/                             # Static assets
+│   ├── index.css                       # Global styles
+│   └── assets/
+│       └── react.svg                   # React logo asset
+├── public/
+│   └── vite.svg                        # Vite logo asset
+├── dist/                               # Production build output
 ├── index.html                          # HTML template
 ├── package.json                        # Dependencies and scripts
 ├── tsconfig.json                       # TypeScript configuration
 ├── vite.config.ts                      # Vite build configuration
-└── netlify.toml                        # Netlify deployment config
+├── eslint.config.js                   # ESLint configuration
+├── netlify.toml                        # Netlify deployment config
+└── README.md                           # This file
 ```
 
 ## Customization
@@ -183,14 +195,16 @@ export const carouselItems: CarouselItem[] = [
 In `src/App.tsx`, modify the carousel props:
 
 ```tsx
-<AccessibleCarousel
+<CarouselWrapper
   items={carouselItems}
   carouselId="main-carousel"
   ariaLabel="Your custom label"
-  autoplay={true}
-  autoplaySpeed={5000} // milliseconds
+  autoplay={false} // Set to false to disable autoplay
+  autoplaySpeed={5000} // milliseconds (only applies when autoplay is true)
 />
 ```
+
+**Note**: By default, autoplay is enabled in the demo. Set `autoplay={false}` to disable automatic slide transitions.
 
 ## Deployment to Netlify
 

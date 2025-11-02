@@ -5,6 +5,7 @@ A fully accessible, performance-optimized carousel component built with React, T
 ## Features
 
 ### Accessibility (WCAG 2.1 AA Compliant)
+
 - ✅ **Full Keyboard Navigation**: Arrow keys, Home, End, Page Up/Down
 - ✅ **Screen Reader Support**: ARIA labels, descriptions, and live regions
 - ✅ **Focus Management**: Visible focus indicators with proper contrast
@@ -14,6 +15,7 @@ A fully accessible, performance-optimized carousel component built with React, T
 - ✅ **High Contrast Mode**: Supports high contrast display settings
 
 ### Performance Optimizations
+
 - ✅ **Suspense Loading**: Skeleton UI during initial load for better UX
 - ✅ **Image Preloading**: First slide image preloads for instant display
 - ✅ **Memoization**: React.memo prevents unnecessary re-renders
@@ -23,6 +25,7 @@ A fully accessible, performance-optimized carousel component built with React, T
 - ✅ **Optimized Rendering**: Minimal re-renders with proper React patterns
 
 ### User Experience
+
 - ✅ **Touch Support**: Swipe gestures on mobile devices
 - ✅ **Responsive Design**: Works seamlessly on all screen sizes
 - ✅ **Customizable**: Easy to configure and extend
@@ -31,6 +34,7 @@ A fully accessible, performance-optimized carousel component built with React, T
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 
@@ -38,11 +42,13 @@ A fully accessible, performance-optimized carousel component built with React, T
 
 1. Clone the repository or extract the project files
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -92,6 +98,7 @@ npm run preview
 ### Expected NVDA Behavior
 
 When testing, NVDA should announce:
+
 - "Image carousel, region" when entering the carousel
 - "Previous slide, button" when focusing previous button
 - "Next slide, button" when focusing next button
@@ -111,11 +118,13 @@ When testing, NVDA should announce:
 ## Accessibility Testing Tools
 
 ### Automated Testing
+
 - **axe DevTools**: Browser extension for accessibility testing
 - **WAVE**: Web accessibility evaluation tool
 - **Lighthouse**: Built into Chrome DevTools (Audit tab)
 
 ### Manual Testing
+
 1. **Keyboard-only navigation**: Test without mouse
 2. **Screen reader testing**: Use NVDA, JAWS, or VoiceOver
 3. **Color contrast**: Verify with WebAIM Contrast Checker
@@ -159,11 +168,11 @@ Edit `src/data/carouselData.ts` to add your own carousel items:
 ```typescript
 export const carouselItems: CarouselItem[] = [
   {
-    id: 'slide-1',
-    title: 'Your Title',
-    description: 'Your description',
-    image: 'path/to/image.jpg',
-    alt: 'Alt text for image',
+    id: "slide-1",
+    title: "Your Title",
+    description: "Your description",
+    image: "path/to/image.jpg",
+    alt: "Alt text for image",
   },
   // ... more items
 ];
@@ -186,6 +195,7 @@ In `src/App.tsx`, modify the carousel props:
 ## Deployment to Netlify
 
 ### Quick Deploy
+
 This project includes a `netlify.toml` configuration file for automatic deployment.
 
 **Live URL**: [Add your Netlify URL here after deployment]
@@ -193,16 +203,19 @@ This project includes a `netlify.toml` configuration file for automatic deployme
 ### Option 1: Using Netlify CLI
 
 1. Install Netlify CLI:
+
 ```bash
 npm install -g netlify-cli
 ```
 
 2. Build the project:
+
 ```bash
 npm run build
 ```
 
 3. Deploy:
+
 ```bash
 netlify deploy --prod --dir=dist
 ```
@@ -236,6 +249,7 @@ netlify deploy --prod --dir=dist
 ## Performance Metrics
 
 The carousel is optimized for:
+
 - Fast initial load time
 - Smooth animations (60fps)
 - Minimal memory footprint
@@ -244,14 +258,11 @@ The carousel is optimized for:
 ## Contributing
 
 When contributing, please ensure:
+
 1. Accessibility standards are maintained
 2. All tests pass
 3. Code follows the existing style
 4. Documentation is updated
-
-## License
-
-This project is open source and available under the MIT License.
 
 ## Resources
 
@@ -263,6 +274,7 @@ This project is open source and available under the MIT License.
 ## Support
 
 For issues or questions:
+
 1. Check the documentation above
 2. Review the code comments in the components
 3. Test with NVDA to verify accessibility
